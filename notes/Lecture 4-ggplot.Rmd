@@ -290,3 +290,9 @@ sync(map1, map2)
 #mapviewOptions(basemaps = c("OpenStreetMap"))
 #map1 | map2
 ```
+```{r}
+#install.packages('mapview')
+library(mapview)
+library(sf)
+df_states <- st_read('/Users/rahmasemma/Downloads/us-states/us-states.shp')
+mapview(df_states, zcol ='population')
